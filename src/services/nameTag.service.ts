@@ -15,11 +15,12 @@ class NameTagService {
         }
     }
 
-    public newTag(playerName: string): void {
+    public newTag(playerName: string, color: string): void {
         if (this.nametagsMap.has(playerName)) return;
         const nametag = document.createElement('div');
         nametag.className = 'nametag';
         nametag.textContent = playerName;
+        nametag.style.color = color;
         graphicsService.graphicsDiv.appendChild(nametag);
         this.nametags.push(nametag);
         this.nametagsMap.set(playerName, nametag);

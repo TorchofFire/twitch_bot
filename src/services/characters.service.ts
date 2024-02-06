@@ -13,7 +13,7 @@ class CharactersService {
         this.characters.push(character);
         this.charactersMap.set(character.username, character);
         Matter.World.add(world, character.body);
-        nameTagService.newTag(character.username);
+        nameTagService.newTag(character.username, character.color);
         characterSpriteService.newSprite(character.username);
         Matter.Body.setVelocity(character.body, { x: (Math.random() - 0.5) * 10, y: 0 });
         return character;
