@@ -1,5 +1,6 @@
 {
     "oauth": "",
     "nick": "",
-    "channel": "ChannelName"
+    "channel": "ChannelName",
+    "prefix": "!"
 }

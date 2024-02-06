@@ -27,8 +27,6 @@ export const render = Matter.Render.create({
 
 mapService.createMap();
 
-charactersService.newCharacter('Torch');
-
 graphicsService.updateViewportCalculations();
 
 function loop(): void {

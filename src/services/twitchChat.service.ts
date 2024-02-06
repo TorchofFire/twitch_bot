@@ -1,4 +1,4 @@
-import { Chat, ChatEvents } from 'twitch-js';
+import { Chat } from 'twitch-js';
 import settings from '../../settings.json';
 import Character from '../objects/character';
 import { charactersService } from './characters.service';
@@ -14,11 +14,14 @@ class TwitchChatService {
         await chat.connect();
         await chat.join(settings.channel);
 
-        chat.on(ChatEvents.CONNECTED, data => {
-            this.getCharacter(data.username);
-        });
         chat.on('PRIVMSG', data => {
             const character = this.getCharacter(data.username);
+            if (data.message.startsWith(settings.prefix)) {
+                if (data.message.includes('left')) character.move('left');
+                if (data.message.includes('right')) character.move('right');
+                if (data.message.includes('jump')) character.jump();
+                return;
+            }
             character.say(data.message);
         });
     }

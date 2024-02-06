@@ -1,5 +1,6 @@
 import Matter from 'matter-js';
 import { graphicsService } from '../services/graphics.service';
+import { world } from '../main';
 
 export default class Character {
 
@@ -28,19 +29,31 @@ export default class Character {
         graphicsService.moveDivToPosition(textMessage, this.body.position);
     }
 
+    move(direction: string): void {
+        if (direction === 'right') {
+            Matter.Body.setVelocity(this.body, { x: Math.random() * 10, y: this.body.velocity.y });
+            return;
+        }
+        Matter.Body.setVelocity(this.body, { x: Math.random() * -10, y: this.body.velocity.y });
+    }
+
+    jump(): void {
+        const collisions = Matter.Query.collides(this.body, world.bodies);
+        collisions.pop();
+        if (collisions.length < 1) return;
+        let onFloor = false;
+        for (const collision of collisions) {
+            if (collision.normal.y > 0.5) {
+                onFloor = true;
+            }
+        }
+        if (!onFloor) return;
+        Matter.Body.setVelocity(this.body, { x: this.body.velocity.x, y: -10 });
+    }
+
     username: string;
 
     color: string;
-
-    onFloor = false;
-
-    actions: {
-        [key: string]: boolean;
-    } = {
-        jump: false,
-        left: false,
-        right: false
-    };
 
     body: Matter.Body;
 
