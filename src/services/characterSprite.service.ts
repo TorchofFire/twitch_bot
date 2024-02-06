@@ -20,10 +20,10 @@ class CharacterSpriteService {
         const sprite = document.createElement('img');
         sprite.className = 'sprite';
         sprite.id = characterName;
-        sprite.style.width = '125px';
+        sprite.style.width = '190px';
         sprite.style.height = '125px';
         sprite.style.transformOrigin = 'top left';
-        sprite.src = characterName === 'torch_of_fire' ? '/src/assets/francis.png' : '/src/assets/smooth.png';
+        sprite.src = characterName === 'torch_of_fire' ? '/src/assets/francis.png' : '/src/assets/s1.png';
         graphicsService.graphicsDiv.appendChild(sprite);
         this.sprites.push(sprite);
         this.spritesMap.set(characterName, sprite);
