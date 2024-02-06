@@ -1,3 +1,4 @@
+import characterImages from '../constants/characterImages.constant';
 import { render } from '../main';
 import { charactersService } from './characters.service';
 import { graphicsService } from './graphics.service';
@@ -23,7 +24,7 @@ class CharacterSpriteService {
         sprite.style.width = '190px';
         sprite.style.height = '125px';
         sprite.style.transformOrigin = 'top left';
-        sprite.src = characterName === 'torch_of_fire' ? '/src/assets/francis.png' : '/src/assets/s1.png';
+        sprite.src = characterName === 'torch_of_fire' ? '/src/assets/s1.png' : characterImages[Math.floor(Math.random() * characterImages.length)];
         graphicsService.graphicsDiv.appendChild(sprite);
         this.sprites.push(sprite);
         this.spritesMap.set(characterName, sprite);
