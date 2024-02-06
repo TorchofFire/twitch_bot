@@ -1,0 +1,145 @@
+{
+    "plugins": [
+      "@typescript-eslint",
+      "unused-imports"
+    ],
+    "extends": [
+      "airbnb-base",
+      "plugin:@typescript-eslint/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "es6": true,
+      "jest": true,
+      "node": true
+    },
+    "ignorePatterns": [
+      "node_modules",
+      "src/migrations"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaVersion": 2021,
+      "ecmaFeatures": {
+        "jsx": true,
+        "experimentalObjectRestSpread": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "arrow-body-style": "off",
+      "arrow-parens": ["error", "as-needed"],
+      "camelcase": "off",
+      "class-methods-use-this": "off",
+      "comma-dangle": ["error", "never"],
+      "default-param-last": "off",
+      "func-names": ["error", "as-needed"],
+      "global-require": "off",
+      "indent": "off",
+      "lines-between-class-members": ["error", "always", {
+        "exceptAfterSingleLine": true
+      }],
+      "max-len": "off",
+      "max-params": "off",
+      "new-cap": "off",
+      "no-console": "off",
+      "no-continue": "off",
+      "no-empty": ["error", {
+        "allowEmptyCatch": true
+      }],
+      "no-extra-semi": "error",
+      "no-floating-decimal": "off",
+      "no-mixed-operators": "off",
+      "no-multi-assign": "off",
+      "no-multiple-empty-lines": ["error", {
+        "max": 1
+      }],
+      "no-await-in-loop": "off",
+      "no-nested-ternary": "off",
+      "no-param-reassign": "off",
+      "no-plusplus": "off",
+      "no-restricted-syntax": "off",
+      "no-shadow": "off",
+      "no-undef": "off",
+      "no-underscore-dangle": "off",
+      "no-unused-expressions": "off",
+      "no-use-before-define": "off",
+      "object-curly-newline": "off",
+      "object-shorthand": "off",
+      "padded-blocks": "off",
+      "prefer-arrow-callback": "off",
+      "prefer-destructuring": "off",
+      "prefer-promise-reject-errors": "off",
+      "quote-props": "off",
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"],
+      "space-before-function-paren": ["error", {
+        "anonymous": "never",
+        "named": "never",
+        "asyncArrow": "always"
+      }],
+      "no-useless-constructor": "off",
+  
+      // Import
+      "import/extensions": "off",
+      "import/first": "off",
+      "import/named": "off",
+      "import/newline-after-import": "off",
+      "import/no-cycle": "off",
+      "import/no-duplicates": "off",
+      "import/no-dynamic-require": "off",
+      "import/no-extraneous-dependencies": "off",
+      "import/no-named-as-default": "off",
+      "import/no-named-as-default-member": "off",
+      "import/no-self-import": "off",
+      "import/no-import-module-exports": "off",
+      "import/no-unresolved": "off",
+      "import/no-useless-path-segments": "off",
+      "import/order": "off",
+      "import/prefer-default-export": "off",
+      "import/no-absolute-path": "error",
+
+      "unused-imports/no-unused-imports-ts": "error",
+  
+      // TypeScript
+      "@typescript-eslint/ban-types": "off",
+      "@typescript-eslint/array-type": "error",
+      "@typescript-eslint/camelcase": "off",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
+      "@typescript-eslint/explicit-function-return-type": ["error"],
+      "@typescript-eslint/explicit-member-accessibility": "off",
+      "@typescript-eslint/indent": ["error", 4, {
+        "SwitchCase": 1,
+        "ignoredNodes": ["PropertyDefinition"] 
+      }],
+      "@typescript-eslint/no-namespace": "off",
+      "@typescript-eslint/member-delimiter-style": "error",
+      "@typescript-eslint/no-empty-function": "off",
+      "@typescript-eslint/no-empty-interface": ["error", {
+        "allowSingleExtends": true
+      }],
+      "@typescript-eslint/no-explicit-any": "error",
+      "@typescript-eslint/no-inferrable-types": "error",
+      "@typescript-eslint/no-shadow": "error",
+      "@typescript-eslint/no-unused-vars": "error",
+      "@typescript-eslint/no-use-before-define": "error",
+      "@typescript-eslint/no-var-requires": "off",
+      "@typescript-eslint/semi": "error",
+      "@typescript-eslint/no-useless-constructor": ["error"]
+    },
+  
+    "overrides": [
+      {
+        "files": [
+          "**/__tests__/**",
+          "**/*.spec.*"
+        ],
+        "rules": {
+          "@typescript-eslint/no-explicit-any": "off",
+  
+          "array-callback-return": "off", // Array.prototype.filter() expects a value to be returned at the end of arrow function
+          "consistent-return": "off" // Expected to return a value at the end of arrow function 
+        }
+      }
+    ]
+  }

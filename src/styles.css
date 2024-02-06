@@ -1,0 +1,41 @@
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  background-color: transparent;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+canvas {
+  display: block;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+
+body, html {
+  margin: 0;
+  overflow: hidden;
+  color: #f6f6f6;
+  background-color: #2f2f2f;
+}
+
+
+.graphics {
+  position: absolute;
+  color: #f6f6f6;
+  margin: 0;
+  z-index: 1;
+  padding-top: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
