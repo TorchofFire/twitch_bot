@@ -1,15 +1,15 @@
 
 const characterImages = [
-    '/src/assets/s1.png',
-    '/src/assets/s2.png',
-    '/src/assets/s3.png',
-    '/src/assets/s4.png',
-    '/src/assets/s5.png',
-    '/src/assets/s6.png',
-    '/src/assets/s7.png',
-    '/src/assets/s8.png',
-    '/src/assets/s9.png',
-    '/src/assets/s10.png'
+    '/s1.png',
+    '/s2.png',
+    '/s3.png',
+    '/s4.png',
+    '/s5.png',
+    '/s6.png',
+    '/s7.png',
+    '/s8.png',
+    '/s9.png',
+    '/s10.png'
 ];
 
 export default characterImages;
