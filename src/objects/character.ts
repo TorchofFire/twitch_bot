@@ -7,7 +7,6 @@ export default class Character {
     constructor(x: number, y: number, nick: string) {
         this.username = nick;
         this.color = `rgb(${Math.random() * 150 + 105}, ${Math.random() * 150 + 105}, ${Math.random() * 150 + 105})`;
-        console.log(this.color);
         const characterCollisionGroup = Matter.Body.nextGroup(true);
         this.body = Matter.Bodies.rectangle(x, y, 40, 120, {
             restitution: 0,

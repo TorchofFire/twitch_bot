@@ -5,7 +5,16 @@ import { charactersService } from './services/characters.service';
 import { graphicsService } from './services/graphics.service';
 import { twitchChatService } from './services/twitchChat.service';
 
-twitchChatService.init();
+// eslint-disable-next-line import/no-mutable-exports
+export let settings = { oauth: '', nick: '', channel: '', prefix: '' };
+
+const init = async (): Promise<void> => {
+    const response = await fetch('/settings.json');
+    settings = await response.json();
+    await twitchChatService.init();
+};
+
+init();
 
 const engine = Matter.Engine.create();
 export const world = engine.world;

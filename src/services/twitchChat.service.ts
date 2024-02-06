@@ -1,7 +1,7 @@
 import { Chat } from 'twitch-js';
-import settings from '../../settings.json';
 import Character from '../objects/character';
 import { charactersService } from './characters.service';
+import { settings } from '../main';
 
 class TwitchChatService {
 
