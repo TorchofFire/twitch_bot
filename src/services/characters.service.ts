@@ -28,10 +28,10 @@ class CharactersService {
         const character = this.charactersMap.get(username);
         if (!character) return;
         Matter.World.remove(world, character.body);
-        this.characters = this.characters.filter(plyr => plyr !== character);
-        this.charactersMap.delete(character.username!);
         nameTagService.removeTag(character.username!);
         characterSpriteService.removeSprite(character.username!);
+        this.characters = this.characters.filter(plyr => plyr !== character);
+        this.charactersMap.delete(character.username!);
     }
 
     public inBetween(): void {

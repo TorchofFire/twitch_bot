@@ -26,7 +26,7 @@ export default class Character {
         textMessage.textContent = message;
         textMessage.style.color = this.color;
         graphicsService.graphicsDiv.appendChild(textMessage);
-        graphicsService.moveDivToPosition(textMessage, this.body.position);
+        graphicsService.moveDivToPosition(textMessage, this.body.position, 0, { x: 0, y: -75 });
     }
 
     move(direction: string): void {

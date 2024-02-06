@@ -20,6 +20,7 @@ class TwitchChatService {
                 if (data.message.includes('left')) character.move('left');
                 if (data.message.includes('right')) character.move('right');
                 if (data.message.includes('jump')) character.jump();
+                if (data.message.includes('leave')) charactersService.removecharacter(character.username);
                 return;
             }
             character.say(data.message);

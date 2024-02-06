@@ -24,7 +24,7 @@ class CharacterSpriteService {
         sprite.style.width = '190px';
         sprite.style.height = '125px';
         sprite.style.transformOrigin = 'top left';
-        sprite.src = characterName === 'torch_of_fire' ? '/src/assets/s1.png' : characterImages[Math.floor(Math.random() * characterImages.length)];
+        sprite.src = characterImages[Math.floor(Math.random() * characterImages.length)];
         graphicsService.graphicsDiv.appendChild(sprite);
         this.sprites.push(sprite);
         this.spritesMap.set(characterName, sprite);
@@ -35,6 +35,7 @@ class CharacterSpriteService {
         if (!sprite) return;
         this.sprites = this.sprites.filter(tag => tag !== sprite);
         this.spritesMap.delete(characterName);
+        sprite.remove();
     }
 }
 

@@ -54,11 +54,11 @@ body, html {
   opacity: 1;
 }
 25% {
-  transform: translateX(-50%) translateY(-200px);
+  transform: translateX(-50%) translateY(-150px);
   opacity: 1;
 }
 80% {
-    transform: translateX(-50%) translateY(-200px);
+    transform: translateX(-50%) translateY(-150px);
     opacity: 1;
   }
 100% {

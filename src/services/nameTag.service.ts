@@ -31,6 +31,7 @@ class NameTagService {
         if (!nametag) return;
         this.nametags = this.nametags.filter(tag => tag !== nametag);
         this.nametagsMap.delete(playerName);
+        nametag.remove();
     }
 }
 
