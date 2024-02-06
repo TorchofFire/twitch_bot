@@ -8,8 +8,8 @@ class MapService {
     public createMap(): void {
         this.addRect({ x: window.innerWidth / 2, y: window.innerHeight + 75 }, window.innerWidth, 150, { isStatic: true });
         this.addRect({ x: window.innerWidth / 2, y: -75 }, window.innerWidth, 150, { isStatic: true });
-        this.addRect({ x: -75, y: window.innerHeight / 2 }, 150, window.innerHeight + 100, { isStatic: true });
-        this.addRect({ x: window.innerWidth + 75, y: window.innerHeight / 2 }, 150, window.innerHeight + 100, { isStatic: true });
+        this.addRect({ x: 125, y: window.innerHeight / 2 }, 150, window.innerHeight + 100, { isStatic: true });
+        this.addRect({ x: window.innerWidth - 125, y: window.innerHeight / 2 }, 150, window.innerHeight + 100, { isStatic: true });
     }
 
     private addRect(position: Matter.Vector, width: number, height: number, options?: Matter.IChamferableBodyDefinition): Matter.Body {

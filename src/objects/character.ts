@@ -1,4 +1,5 @@
 import Matter from 'matter-js';
+import { graphicsService } from '../services/graphics.service';
 
 export default class Character {
 
@@ -19,7 +20,12 @@ export default class Character {
     }
 
     say(message: string): void {
-        console.log(message);
+        const textMessage = document.createElement('div');
+        textMessage.className = 'textMessage';
+        textMessage.textContent = message;
+        textMessage.style.color = this.color;
+        graphicsService.graphicsDiv.appendChild(textMessage);
+        graphicsService.moveDivToPosition(textMessage, this.body.position);
     }
 
     username: string;
