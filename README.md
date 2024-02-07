@@ -72,3 +72,6 @@ This will run the built project. Pay attention to the port hosted since it will 
 
 ## Contributing
 I don't have much experience with contributions, but feel free to contribute to this project by opening issues or pull requests.
+
+## Credits
+- Damian Borowiak for the art https://free3d.com/user/damianb
