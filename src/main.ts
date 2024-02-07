@@ -6,7 +6,7 @@ import { graphicsService } from './services/graphics.service';
 import { twitchChatService } from './services/twitchChat.service';
 
 // eslint-disable-next-line import/no-mutable-exports
-export let settings = { oauth: '', nick: '', channel: '', prefix: '' };
+export let settings = { oauth: '', nick: '', channel: '', prefix: '!' };
 
 const init = async (): Promise<void> => {
     const response = await fetch('/settings.json');
@@ -33,6 +33,8 @@ export const render = Matter.Render.create({
 });
 
 // Matter.Render.run(render); // debugging
+
+// charactersService.newCharacter('Torch'); // debugging
 
 mapService.createMap();
 
