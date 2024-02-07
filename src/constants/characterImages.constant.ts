@@ -1,15 +1,8 @@
 
-const characterImages = [
-    '/s1.png',
-    '/s2.png',
-    '/s3.png',
-    '/s4.png',
-    '/s5.png',
-    '/s6.png',
-    '/s7.png',
-    '/s8.png',
-    '/s9.png',
-    '/s10.png'
-];
+const images = import.meta.glob('/public/character-images/*');
+const imagePathsUntrimmed = Object.keys(images).map(key => key.slice(1));
+
+// Vite doesn't like it when you include public in the file path yet glob only works with it 🤔
+const characterImages = imagePathsUntrimmed.map(path => path.replace('public', ''));
 
 export default characterImages;

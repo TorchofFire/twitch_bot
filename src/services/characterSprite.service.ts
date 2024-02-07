@@ -4,14 +4,16 @@ import { charactersService } from './characters.service';
 import { graphicsService } from './graphics.service';
 
 class CharacterSpriteService {
-    sprites: HTMLDivElement[] = [];
-    spritesMap: Map<string, HTMLDivElement> = new Map();
+    sprites: HTMLImageElement[] = [];
+    spritesMap: Map<string, HTMLImageElement> = new Map();
 
     public moveSpritesToCharacters(): void {
         for (const sprite of this.sprites) {
             if (!sprite.id) continue;
             const character = charactersService.charactersMap.get(sprite.id);
             if (!character || !render.options.width) return;
+            sprite.style.width = `${sprite.naturalWidth / 5.7}px`;
+            sprite.style.height = `${sprite.naturalHeight / 5.7}px`;
             graphicsService.moveDivToPosition(sprite, character.body.position, character.body.angle);
         }
     }
@@ -21,10 +23,8 @@ class CharacterSpriteService {
         const sprite = document.createElement('img');
         sprite.className = 'sprite';
         sprite.id = characterName;
-        sprite.style.width = '190px';
-        sprite.style.height = '125px';
-        sprite.style.transformOrigin = 'top left';
         sprite.src = characterImages[Math.floor(Math.random() * characterImages.length)];
+        sprite.style.transformOrigin = 'top left';
         graphicsService.graphicsDiv.appendChild(sprite);
         this.sprites.push(sprite);
         this.spritesMap.set(characterName, sprite);

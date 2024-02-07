@@ -15,7 +15,18 @@ Download [the latest release](https://github.com/TorchofFire/twitch_bot/releases
 
 ---
 
-## Getting Started
+## Viewer Commands
+
+| Command |      Description      |
+| ------- | --------------------- |
+| !left   | moves character left  |
+| !right  | moves character right |
+| !jump   | character jumps       |
+| !leave  | character deletes     |
+
+> Note that you can combine commands. Example: `!leftjump`. It just needs the prefix first and key words after. Prefix can be set as anything else by the host!
+
+## Getting Started With Development
 
 ### Prerequisites
 

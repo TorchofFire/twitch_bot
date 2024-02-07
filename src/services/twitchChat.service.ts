@@ -16,7 +16,7 @@ class TwitchChatService {
 
         chat.on('PRIVMSG', data => {
             const character = this.getCharacter(data.username);
-            if (data.message.startsWith(settings.prefix)) {
+            if (data.message.trimStart().startsWith(settings.prefix)) {
                 if (data.message.includes('left')) character.move('left');
                 if (data.message.includes('right')) character.move('right');
                 if (data.message.includes('jump')) character.jump();
