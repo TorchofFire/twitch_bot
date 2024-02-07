@@ -76,3 +76,4 @@ I don't have much experience with contributions, but feel free to contribute to 
 
 ## Credits
 - Damian Borowiak for the art https://free3d.com/user/damianb
+- Inspired by [Pirate Software's](https://www.twitch.tv/piratesoftware) ferrets on his stream
