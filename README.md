@@ -5,7 +5,7 @@
 
 # Torch's Twitch Chatbot
 
-> This twitch chat bot when ran on a (local) webserver lets you add your twitch chat as characters to your stream. It utilizes Matter-js, and Twitch-js.
+> This twitch chat bot when ran on a (local) webserver lets you add your twitch chat as characters to your stream. It currently functions as only an overlay that can read twitch chat. It utilizes Matter-js, and Twitch-js.
 
 ![OBS Screenshot](https://cdn.discordapp.com/attachments/781570753073774642/1204597222700744744/image.png?ex=65d54f96&is=65c2da96&hm=d4307102ba4fbd27d12e6406f6f28e19f9395137c7588e2f31955dca57e53e94&)
 ---
