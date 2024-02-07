@@ -43,7 +43,7 @@ Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com
 
 ### Setup Settings
 
-Copy the `settings.json.example` file and rename it to `settings.json`. Input your settings. Your settings are set to not be tracked by git.
+In the Public folder, copy the `settings.json.example` file and rename it to `settings.json`. Input your settings. Your settings are set to not be tracked by git.
 
 ### Usage
 
