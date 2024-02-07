@@ -69,7 +69,7 @@ To preivew the project after building, use the following command:
 ```bash
 yarn preview
 ```
-This will run the built project. Pay attention to the port hosted since it will most likely be different then development.
+This will run the built project. Pay attention to the port hosted since it will most likely be different than development.
 
 ## Contributing
 I don't have much experience with contributions, but feel free to contribute to this project by opening issues or pull requests.
