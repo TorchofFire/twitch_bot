@@ -41,6 +41,10 @@ Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com
     yarn install
     ```
 
+### Setup Settings
+
+Copy the `settings.json.example` file and rename it to `settings.json`. Input your settings. Your settings are set to not be tracked by git.
+
 ### Usage
 
 1. Start the development server:
