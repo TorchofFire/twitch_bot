@@ -55,6 +55,7 @@ Make sure you have [Node.js](https://nodejs.org/) and [Yarn](https://yarnpkg.com
 ### Setup Settings
 
 In the Public folder, copy the `settings.json.example` file and rename it to `settings.json`. Input your settings. Your settings are set to not be tracked by git.
+> Useful links: [Twitch Dev Dashboard](https://dev.twitch.tv/console/apps), [OAuth password generator](https://twitchapps.com/tmi/)
 
 ### Usage
 
