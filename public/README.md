@@ -19,7 +19,7 @@
  
  - The prefix is what the chat uses for commands
 
-5. Run a local webserver on this directory (twitch_bot_vX.X.X)
+5. Run a local webserver on this directory (.../twitch_bot_vX.X.X)
 
  - What I use is Nodejs + http-server. Download https://nodejs.org/en (restart might be required), then in the command prompt use `npm install -g http-server`. Make sure you are in the correct directory and run `http-server`.
 
