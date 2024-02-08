@@ -4,13 +4,16 @@ import { mapService } from './services/map.service';
 import { charactersService } from './services/characters.service';
 import { graphicsService } from './services/graphics.service';
 import { twitchChatService } from './services/twitchChat.service';
+import { characterSpriteService } from './services/characterSprite.service';
 
 // eslint-disable-next-line import/no-mutable-exports
 export let settings = { oauth: '', nick: '', channel: '', prefix: '!' };
 
 const init = async (): Promise<void> => {
-    const response = await fetch('/settings.json');
-    settings = await response.json();
+    const settingsResponse = await fetch('/settings.json');
+    settings = await settingsResponse.json();
+    const imageIndexResponse = await fetch('/character-images/imageIndex.json');
+    characterSpriteService.characterImageIndex = await imageIndexResponse.json();
     await twitchChatService.init();
 };
 

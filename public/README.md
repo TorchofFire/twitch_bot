@@ -19,16 +19,21 @@
  
  - The prefix is what the chat uses for commands
 
-5. Run a local webserver on this directory (.../twitch_bot_vX.X.X)
+5. Optional: Change out the character images in `character-images`
+
+ - There at least needs to be 1 and you can have as many as you'd like. You ***need*** to edit the `imageIndex.json` file with your changes!
+
+6. Run a local webserver on this directory (.../twitch_bot_vX.X.X)
 
  - What I use is Nodejs + http-server. Download https://nodejs.org/en (restart might be required), then in the command prompt use `npm install -g http-server`. Make sure you are in the correct directory and run `http-server`.
 
-6. Pay attention to the port the server is running on. Open your broadcasting software and add a browser instance. Input the URL as `http://localhost:PORT`. Any resolution that isn't really small works.
+7. Pay attention to the port the server is running on. Open your broadcasting software and add a browser instance. Input the URL as `http://localhost:PORT`. Any resolution that isn't really small works.
+
+> Note that if you make any file changes you will need to restart the server and refresh the browser instance.
 
 ---
 
 And that's it! Check if it worked by chatting in your stream.
-
 
 ---
 
