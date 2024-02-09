@@ -15,6 +15,14 @@ Download [the latest release](https://github.com/TorchofFire/twitch_bot/releases
 
 ---
 
+## Features
+- Browser Overlay. It uses actual transparency instead of depending on chroma-keying.
+- Characters get automatically added with a random color nametag and random image when someone chats.
+- When your twitch chat speaks their text displays above their character.
+- Uses Matter.js for 2D physics. (This will be leveraged more in later updates)
+- Character images are customizable. Add your own!
+- Viewer Commands.
+
 ## Viewer Commands
 
 | Command |      Description      |
