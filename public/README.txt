@@ -9,9 +9,7 @@
 
 2. Get an oauth password https://twitchapps.com/tmi/
 
-3. Rename the `settings.json.example` file to `settings.json`
-
-4. Edit the `settings.json` file to include your oauth, nick, channel, and prefix. 
+3. Edit the `settings.json` file to include your oauth, nick, channel, and prefix. 
 
  - The channel is the channel name, not the whole url. Example:
  ❌ ~~https://www.twitch.tv/torch_of_fire~~
@@ -19,15 +17,15 @@
  
  - The prefix is what the chat uses for commands
 
-5. Optional: Change out the character images in `character-images`
+4. Optional: Change out the character images in `character-images`
 
  - There at least needs to be 1 and you can have as many as you'd like. You ***need*** to edit the `imageIndex.json` file with your changes!
 
-6. Run a local webserver on this directory (.../twitch_bot_vX.X.X)
+5. Run the local webserver by running the provided `localserver.exe`
 
- - What I use is Nodejs + http-server. Download https://nodejs.org/en (restart might be required), then in the command prompt use `npm install -g http-server`. Make sure you are in the correct directory and run `http-server`.
+ - Or, just run any random local webserver on this directory (.../twitch_bot_vX.X.X).
 
-7. Pay attention to the port the server is running on. Open your broadcasting software and add a browser instance. Input the URL as `http://localhost:PORT`. Any resolution that isn't really small works.
+6. Pay attention to the port the server is running on. Open your broadcasting software and add a browser instance. Input the URL as `http://localhost:PORT`. Any resolution that isn't really small works.
 
 > Note that if you make any file changes you will need to restart the server and refresh the browser instance.
 
