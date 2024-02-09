@@ -12,7 +12,7 @@
 3. Edit the `settings.json` file to include your oauth, nick, channel, and prefix. 
 
  - The channel is the channel name, not the whole url. Example:
- ❌ ~~https://www.twitch.tv/torch_of_fire~~
+ ❌ https://www.twitch.tv/torch_of_fire
  ✅ torch_of_fire
  
  - The prefix is what the chat uses for commands
